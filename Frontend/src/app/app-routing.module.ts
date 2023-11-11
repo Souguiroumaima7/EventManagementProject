@@ -1,32 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { EmployeeComponent } from './Compoments/employee/employee.component'
-import { DepartmentComponent } from './Compoments/department/department.component';
-import { SpaceParkingComponent } from './Compoments/space-parking/space-parking.component';
-import { LicensingComponent } from './Compoments/licensing/licensing.component';
-import { AboutComponent } from './Compoments/about/about.component';
-import { FooterComponent } from './Compoments/footer/footer.component';
-import { ProjectComponent } from './Compoments/projet/projet.component';
-import { PrivacyPolicyComponent } from './Compoments/privacy-policy/privacy-policy.component';
-import { NavbarComponent } from './Compoments/navbar/navbar.component';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { EventComponent } from './Components/event/event.component';
+import { EventListComponent } from './Components/event-list/event-list.component';
+import { CreationEventComponent } from './Components/creation-event/creation-event.component';
+import { SubscribeComponent } from './Components/subscribe/subscribe.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 const routes: Routes = [
-  {path:'Navbar',component:NavbarComponent},
-  { path: 'about', component: AboutComponent },
- { path: 'employee', component: EmployeeComponent },
- { path: 'department', component:DepartmentComponent },
- {path:'space-parking',component:SpaceParkingComponent},
- {path:'project',component:ProjectComponent},
- {path:'privacy-policy' , component:PrivacyPolicyComponent},
- {path:'licensing',component:LicensingComponent},
- { path:'footer', component:FooterComponent},
-
-
-
+  {path:'NavBar',component:NavBarComponent},
+  {path:'Events',component:EventComponent} ,
+  {path:'Event-List',component:EventListComponent} ,
+  {path:'Creation-Events',component:CreationEventComponent} ,
+  {path:'Subscribe',component:SubscribeComponent} ,
+  {path:'footer',component:FooterComponent}
 ];
 
 @NgModule({
- imports: [RouterModule.forRoot(routes)],
- exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,0 +1,25 @@
+<table>
+    <tr>
+       <th>Name</th>
+       <th>Date</th>
+       <th>Description</th>
+    </tr>
+    <tr *ngFor="let event of events">
+       <td>{{event.name}}</td>
+       <td>{{event.date | date}}</td>
+       <td>{{event.description}}</td>
+    </tr>
+   </table>
+   
+   <form (ngSubmit)="addEvent()" #eventForm="ngForm">
+    <label for="name">Name</label>
+    <input type="text" id="name" required [(ngModel)]="name" name="name">
+     
+    <label for="date">Date</label>
+    <input type="date" id="date" required [(ngModel)]="date" name="date">
+     
+    <label for="description">Description</label>
+    <textarea id="description" required [(ngModel)]="description" name="description"></textarea>
+     
+    <button type="submit">Add Event</button>
+   </form>
