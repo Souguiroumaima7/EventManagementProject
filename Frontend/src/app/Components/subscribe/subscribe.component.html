@@ -1,9 +1,0 @@
-<form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-       <label for="email">Email address</label>
-       <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email">
-    </div>
-    <input [(ngModel)]="email" (change)="validateEmail()" placeholder="Enter your email">
-     <div *ngIf="emailError">{{ emailError }}</div>
-    <button type="submit" class="btn btn-primary">Subscribe</button>
-   </form>
